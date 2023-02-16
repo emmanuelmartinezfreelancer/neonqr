@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Habitando la metamorfosis</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+  <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="css/metamorfosis.css">
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="fav.png">
+  
+
+</head>
+
+<body>
+ 
+
+  <div class="backL"> <canvas id="canvasHydra"></canvas></div>
+
+  <div class="backArte">
+
+    <div id="wrapText" class="modal__interior">
+      <h1 class="rojoAlquitran" style="font-size: 16px; color: #be9b39; padding-bottom: 5px;;"><b>Facultad de Artes y Diseño, UNAM</b></h1>
+      <h1 style="font-size: 24px;" class="rojoAlquitran">
+        <b>HABITANDO LA METAMORFOSIS</b>
+      </h1>
+      <h3 style="font-size: 16px;" id="divisionInvestigacion"><a href="https://fad.unam.mx/espacios-de-atencion/division-de-investigacion/">División de Investigación</a></h3>
+      <h3 style="font-size: 14px;" id="exposicionColectiva">Exposición colectiva del <a href="https://mitote.org/">Mitote ICDAC</a></h3>
+      
+      <br>
+      <p class="tamañoTexto">/Da <a href="html/index.html">click aquí</a> para comenzar. Controla la vista moviendo el mouse hacia la izquierda y derecha o presionando con tu dedo la pantalla.
+      /La velocidad está determinada por la distancia del mouse/dedo con respecto al centro. /En Desktop, puedes moverte con W,A,S Y D.
+      
+      </p>
+  
+      <h3 style="font-size: 16px;">Participantes:</h3>
+      
+      
+      <p>Amardín Cerezo Cruz <b>IG: @amardolodon</b><br>
+        
+        Silvia Teresa Flota Reyes<br>
+        Viviana Martínez <b>IG: @vivianamartinezh</b><br>
+        Rubén Cerrillo <b>IG: @ruben.cerrillo</b><br>
+        Paula Elizabeth Martínez Vásquez <b>IG: @pauu_li_ </b><br>
+        Jorge Rojas Jiménez<br>
+        Marisol Sagastume Chávez <b>IG: @la_pinche_intensa</b><br>
+       </p>
+
+        
+
+        <h3 style="font-size: 16px;">Obras en 3D</h3>
+        <p>
+          Magali Rivera Montes <b>IG:@rivmonart</b><br> 
+          Luis Enrique Rivas Rodríguez <b>IG:@skullface_fox</b><br> 
+        </p>
+
+
+        <h3>Arte Sonoro</h3>
+        <p>
+        Jysus Ramirez <b>IG: @el_jysus_</b><br> 
+        </p>
+
+        <h3 style="font-size: 16px;">Obra en Unity</h3>
+      <p>Leonardo Gabriel Cervantes Zúñiga <b>IG: @leopardoww</b></p>
+
+        <h3 style="font-size: 16px;">Programación</h3>
+        <p>
+          Emmanuel Martínez <b>IG: @eemmanuelmrtnz</b><br> 
+          </p>
+
+        <p>El campo pre espacial es una capa adyacente a todos los dispositivos donde los datos no tienen cualidades. Se comportan como una bruma o tormenta de relaciones de datos. Desde ahí se proyecta el eEspacio.
+          
+          <br><br>{e}, hace explícito un lugar donde la profundidad es conceptual por que existe a partir de una serie de superficies de información que en sintagma impactan en la memoria y el ojo. Si uno intentara medir las diferentes entidades que se manifiestan en la interfaz, podrá obtener resultados de ancho y altura, pero no de profundidad. La profundidad siempre será fija y del tamaño del dispositivo electrónico.</p>
+
+
+      
+      
+        
+     
+      <br id="brD">
+     
+      
+
+    </div>
+
+
+
+  </div>
+
+  <div class="creditosFixed">
+   
+    <img class="creditos2" src="img/logoUNAM.svg" alt="UNAM">
+  </div>
+
+
+
+</body>
+
+<!-- --------------------------- Script de Hydra --------------------------- -->
+<script>
+  var scale = window.devicePixelRatio;
+  var size = 1000;
+  var c = document.getElementById("canvasHydra");
+  c.width = Math.floor(size * scale);
+  c.height = Math.floor(size * scale);
+
+  // create a new hydra-synth instance
+  var hydra = new Hydra({
+    canvas: document.getElementById("canvasHydra")
+  });
+
+
+  noise(2,1,10).modulateKaleid(osc(0.2,2,1)).add(solid(1)).colorama().modulateRotate(osc(8,0.1)).out()
+
+
+</script>
+
+<script>
+  var mediaqueryP = window.matchMedia("(max-width: 668px)");
+  if(mediaqueryP.matches) {
+
+    Swal.fire({
+  
+  html:
+    'Favor de verlo en Desktop <br>con Firefox<br><br>',
+  icon:'info',
+  iconColor: "#919191",
+  confirmButtonColor: '#919191',
+  footer: '&nbsp',
+  imageUrl: 'img/logoUNAM.svg',
+  imageWidth: 200
+  
+})
+
+  }
+
+
+
+</script>
+
+</html>
